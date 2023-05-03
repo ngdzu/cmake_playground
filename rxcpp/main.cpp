@@ -1,9 +1,28 @@
+#if 1
 #include <rx.hpp>
-namespace Rx {
-using namespace rxcpp;
-using namespace rxcpp::sources;
-using namespace rxcpp::operators;
-using namespace rxcpp::util;
+#else
+#include <rx-lite.hpp>
+#include <operators/rx-filter.hpp>
+#include <operators/rx-group_by.hpp>
+#include <operators/rx-flat_map.hpp>
+#include <operators/rx-repeat.hpp>
+#include <operators/rx-concat.hpp>
+#include <operators/rx-window.hpp>
+#include <operators/rx-reduce.hpp>
+#include <operators/rx-concat_map.hpp>
+#include <operators/rx-tap.hpp>
+#include <operators/rx-window_toggle.hpp>
+#include <operators/rx-map.hpp>
+#include <operators/rx-start_with.hpp>
+
+#endif
+
+namespace Rx
+{
+    using namespace rxcpp;
+    using namespace rxcpp::sources;
+    using namespace rxcpp::operators;
+    using namespace rxcpp::util;
 }
 using namespace Rx;
 
