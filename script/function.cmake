@@ -9,6 +9,13 @@ function(MyFunction FirstArg)
     message("ARGV0: ${ARGV0} ARGV1: ${ARGV1} ARGC: ${ARGC}")
 endfunction()
 
+function(FunctionB)
+    message("Function: ${CMAKE_CURRENT_FUNCTION}")
+    message("ARGV0: ${ARGV0}, ARGV1: ${ARGV1}, ARGV2: ${ARGV2}, ARGC: ${ARGC}")
+endfunction()
+
 set(FirstArg "first value") # global scope FirstArg
 MyFunction("Value1" "Value2") # "Value1" as FirstArg of MyFunction scope
 message("FirstArg in global scope: ${FirstArg}")
+message("===================")
+FunctionB(one two three four five)
