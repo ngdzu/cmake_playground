@@ -1,0 +1,5 @@
+Make sure you have libpqxx-dev installed before building this example.
+
+```
+brew install libpqxx
+```
