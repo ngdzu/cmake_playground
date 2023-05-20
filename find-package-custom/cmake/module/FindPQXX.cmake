@@ -21,6 +21,9 @@ if(PQXX_LIBRARIES AND PQXX_INCLUDES)
   return()
 endif()
 
+include(CMakeFindDependencyMacro)
+find_dependency(PostgreSQL)
+
 file(TO_CMAKE_PATH "$ENV{PQXX_DIR}" _PQXX_DIR)
 find_library(PQXX_LIBRARY NAMES libpqxx pqxx
   PATHS

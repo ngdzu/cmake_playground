@@ -1,4 +1,9 @@
-Make sure you have libpqxx-dev installed before building this example.
+Make sure you have libpqxx-dev and PostgresSQL installed before building this example.
+
+```
+$ brew install libpqxx
+$ brew install postgresql@14
+```
 
 In this sample project, we write a custom find-packge file 
         cmake/module/FindPQXX.cmake 
